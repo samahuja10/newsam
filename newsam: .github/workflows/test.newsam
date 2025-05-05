@@ -1,0 +1,17 @@
+name: Greet Me on Push
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  greet:
+    runs-on: windows-latest
+
+    steps: 
+      -name: checkout code
+       uses: actions/checkout@v4
+
+      -name: Greet the World
+       run: echo "Hello, World! Your code was just pushed on Windows!"
